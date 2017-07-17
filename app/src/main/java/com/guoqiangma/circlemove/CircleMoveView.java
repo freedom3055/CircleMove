@@ -77,14 +77,14 @@ public class CircleMoveView extends View {
         double dy = Math.abs(halfWidth - y);
         double dxy = Math.sqrt(Math.pow(dx, 2)
                 + Math.pow(dy, 2));
-        double yinshu = (halfWidth - ringWidth / 2.0) / dxy;
+        double factor = (halfWidth - ringWidth / 2.0) / dxy;
 
         if (y < halfWidth) {
-            tempX = (float) (centerX - dx * yinshu);
-            tempY = (float) (centerY - dy * yinshu);
+            tempX = (float) (centerX - dx * factor);
+            tempY = (float) (centerY - dy * factor);
         } else {
-            tempX = (float) (centerX - dx * yinshu);
-            tempY = (float) (centerY + dy * yinshu);
+            tempX = (float) (centerX - dx * factor);
+            tempY = (float) (centerY + dy * factor);
         }
 
     }
